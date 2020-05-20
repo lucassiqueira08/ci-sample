@@ -6,3 +6,11 @@ before_install:
 script:
 - npm install
 - npm run pretest
+deploy:
+  provider: heroku
+  api_key:
+    secure: bgweqvhv0K9Mcx8Xe4zv6QBfTbmwcj0Cq/8lbmf4s6ie8zZDyTWCkgEPYAOrfWCGd2cUC4vswrQ9ZmJz3AhgsuxOPOXTfw8N448DcSnvzeZfc0t8jun6XVLpDtmzIAKASVwlkOBnUZnj4cu2+Xy/CR+Qv8z6QOGGluUnGf2MkyfMi4HZGu7I5JiVRUsQWm0CzpAFYkoJin/C0KzY6hyu8LXGPwGcdFklOXka0gfhNUO7KyWs8n79/88K/qTQqrwvBJoL/FxJm130RVSEuR8b69/stkrspsFi2lYQimYmoDaBoe+lyk/nNKMlS1NqOeJsOab/LCc8cbwnxmKN2zzmuVeXI0PuhSm0dBTRzc62/0NqJWRvJUlSjNGheTy1EML0XBRY88IbrJmbfMj2ia8WW+9CNx3dE/EynJajhsjBJkyt5m/IHpFLA32B6WNfDZEMZaIuz1CZrSBReOwzVw0fJIUuGs+GXd4XCUnZIVfxpusfzSD1jSSkBqYshf3/bUiflJ9RHd1QmA4/wXQWpjrlOgIZWXIRJGkgXqfy5O9sMSvUJ/+PTwjFDZHph6QUpvD+UFN4/sp6rpXIMo88vuPCBZFih87rtMHwtF8l3VMH4K3Es9aodmLGHTsRtCgGeZu5WhIVXeuEPxlWnTO9E34R0NXossKmHFFzdd8oFQj5M/M=
+  app: ci-sample
+  on:
+    repo: lucassiqueira08/ci-sample
+  skip_cleanup: 'true'
